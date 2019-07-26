@@ -4,7 +4,7 @@ import React from "react";
 
 const PrivateRoute = ({ isLoggedIn, component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
-    true === true
+    isLoggedIn === true
       ? <Component {...props} />
       : <Redirect to={{
         pathname: '/signin',
